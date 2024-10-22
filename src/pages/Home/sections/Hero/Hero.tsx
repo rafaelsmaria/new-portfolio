@@ -1,4 +1,4 @@
-import { Container, Grid, styled, Typography } from "@mui/material"
+import { Box, Container, Grid, styled, Typography } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.jpeg"
 import FileDownloadIcon from '@mui/icons-material/FileDownload';
 import EmailIcon from '@mui/icons-material/Email';
@@ -32,8 +32,11 @@ const Hero = () => {
             <StyledHero>
                 <Container maxWidth="lg">
                     <Grid container spacing={2}>
-                        <Grid item xs={12} md={5}>
-                            <StyledImage src={Avatar} />
+                        <Grid item xs={12} md={5} justifyContent={"center"}>
+                            <Box position="relative" textAlign="center">
+                                <StyledImage src={Avatar} />
+
+                            </Box>
                         </Grid>
                         <Grid item xs={12} md={7}>
                             <Typography color="primary.contrastText" variant="h1" textAlign="center">
@@ -43,7 +46,7 @@ const Hero = () => {
                                 I'm a Software Engineer
                             </Typography>
 
-                            <Grid container display={"flex"} justifyContent={"center"} spacing={3}>
+                            <Grid container display={"flex"} justifyContent={"center"} spacing={3} marginTop={"10px"}>
                                 <Grid item xs={12} md={4} display={"flex"} justifyContent={"center"}>
                                     <StyledButton onClick={() => {
                                         downloadPDF('../../../../assets/docs/CV-RafaelMaria-BR.pdf', 'CV-RafaelMaria-BR.pdf')

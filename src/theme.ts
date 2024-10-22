@@ -3,16 +3,16 @@ import { colors, createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
     palette: {
       primary: {
-        main: colors.brown[900],
+        main: colors.grey[900],
 
       },
       secondary: {
-        main: colors.teal[900],
+        main: colors.lightBlue[900],
 
       },
     },
     typography: {
-        fontFamily: "Roboto"
+        fontFamily: "Segoe UI"
     }
   });
 
